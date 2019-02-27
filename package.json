@@ -1,0 +1,19 @@
+{
+  "name": "rest-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "A Node.js RESTFUL API Project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "sandeep raju",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
