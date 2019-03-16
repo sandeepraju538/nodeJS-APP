@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/nodeRestShop');
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false}));
