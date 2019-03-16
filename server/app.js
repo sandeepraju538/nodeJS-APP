@@ -8,6 +8,8 @@ const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost:27017/nodeRestShop');
 
+mongoose.Promise = global.Promise;
+
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
