@@ -75,7 +75,6 @@ router.get('/:productId', (req, res, next) => {
         } else {
             res.status(404).json({ message: 'Product ID not found, didnt match for any entry in Database with provided id:'+ id});
         }
-        
     }).catch(err => {
         console.log(err);
         res.status(500).json({ error: err });
