@@ -6,7 +6,26 @@ const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/nodeRestShop');
+// mongoose.connect('mongodb://localhost:27017/nodeRestShop');
+
+const MONGO_URL = "mongodb+srv://sandeep:Raju@538@cluster0-yp5uq.mongodb.net/nodeRestShop";
+mongoose.connect(MONGO_URL,
+{
+    useNewUrlParser: true , 
+    auth: {
+        user: 'sandeep',
+        password: 'Raju@538'
+    }
+});
+
+// const MongoClient = require('mongodb').MongoClient;
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("nodeRestShop").collection("products");
+//   // perform actions on the collection object
+//   client.close();
+// });
+
 
 mongoose.Promise = global.Promise;
 
